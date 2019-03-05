@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.simon.fyp_2.SelectView"
+    tools:showIn="@layout/activity_select_view"
+    android:background="#00b442">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:id="@+id/okayBtn"
+        android:clickable="true"
+        android:onClick="onClickOk"
+        android:background="#f2c216"
+        android:layout_marginTop="56dp"
+        android:layout_below="@+id/dataSpn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Individual Expenses"
+        android:id="@+id/indBtn"
+        android:layout_marginTop="76dp"
+        android:clickable="true"
+        android:onClick="onClickIndiv"
+        android:background="#f2c216"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="___________________________"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/okayBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select timescale"
+        android:id="@+id/timeTV"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeSpn"
+        android:entries="@array/timeSel_array"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/timeTV"
+        android:layout_toRightOf="@+id/timeTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select data grouping"
+        android:id="@+id/dataTV"
+        android:layout_below="@+id/timeSpn"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/timeTV"
+        android:layout_alignEnd="@+id/timeTV"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataSpn"
+        android:entries="@array/dataSel_array"
+        android:layout_below="@+id/timeSpn"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/dataTV"
+        android:layout_toEndOf="@+id/dataTV" />
+</RelativeLayout>
